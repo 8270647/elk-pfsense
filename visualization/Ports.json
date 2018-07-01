@@ -1,0 +1,74 @@
+{
+  "title": "Ports",
+  "type": "pie",
+  "params": {
+    "type": "pie",
+    "addTooltip": true,
+    "addLegend": true,
+    "legendPosition": "right",
+    "isDonut": true,
+    "labels": {
+      "show": false,
+      "values": true,
+      "last_level": true,
+      "truncate": 100
+    }
+  },
+  "aggs": [
+    {
+      "id": "1",
+      "enabled": true,
+      "type": "count",
+      "schema": "metric",
+      "params": {}
+    },
+    {
+      "id": "2",
+      "enabled": true,
+      "type": "terms",
+      "schema": "segment",
+      "params": {
+        "field": "proto.keyword",
+        "otherBucket": false,
+        "otherBucketLabel": "Other",
+        "missingBucket": false,
+        "missingBucketLabel": "Missing",
+        "size": 5,
+        "order": "desc",
+        "orderBy": "1"
+      }
+    },
+    {
+      "id": "3",
+      "enabled": true,
+      "type": "terms",
+      "schema": "segment",
+      "params": {
+        "field": "dest_port.keyword",
+        "otherBucket": false,
+        "otherBucketLabel": "Other",
+        "missingBucket": false,
+        "missingBucketLabel": "Missing",
+        "size": 5,
+        "order": "desc",
+        "orderBy": "1"
+      }
+    },
+    {
+      "id": "4",
+      "enabled": true,
+      "type": "terms",
+      "schema": "segment",
+      "params": {
+        "field": "src_port.keyword",
+        "otherBucket": false,
+        "otherBucketLabel": "Other",
+        "missingBucket": false,
+        "missingBucketLabel": "Missing",
+        "size": 5,
+        "order": "desc",
+        "orderBy": "1"
+      }
+    }
+  ]
+}
