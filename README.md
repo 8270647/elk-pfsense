@@ -28,5 +28,5 @@ While many versions of the Grok patters to support pfsense 2.4.+ exist, the foll
 
 The configurations are primarily a collection of information learned from the following sites:
 
-http://pfelk.3ilson.com/
-https://forum.netgate.com/topic/107735/elk-pfsense-2-3-working/12
+- "http://pfelk.3ilson.com/"
+- "https://forum.netgate.com/topic/107735/elk-pfsense-2-3-working/12"
