@@ -17,6 +17,7 @@ A small collection of Logstash configurations to support pFsense 2.4.3 and dashb
 - Copy the contents of the /conf.d folder to your local logstash installation path (e.g. /etc/logstash/conf.d)
 - Copy the contents of the /patterns folder to your local logstash installation path (e.g. /etc/logstash/patterns)
 - Import the visualization templates into your local Kibana installation
+- Create your desired Kibana dashboard from the imported visualization(s)
 
 
 # Patterns
