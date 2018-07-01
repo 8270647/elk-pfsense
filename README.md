@@ -1,5 +1,5 @@
 # elk-pfsense
-A small collection of Logstash configurations to support pFsense 2.4.3 and dashboard visualizations within Kibana.
+A small collection of Logstash configurations to support pFsense 2.4.3 and dashboard visualizations within Kibana 6.3.+ on Ubuntu Server 18.04.
 
 ![alt text](https://github.com/8270647/elk-pfsense/blob/master/kibana-dashboard-visu.JPG)
 
@@ -26,5 +26,5 @@ While many versions of the Grok patters to support pfsense 2.4.+ exist, the foll
 # Credits / Reference
 
 The configurations are primarily a collection of information learned from the following sites:
--http://pfelk.3ilson.com/
-
+  -http://pfelk.3ilson.com/
+  -https://forum.netgate.com/topic/107735/elk-pfsense-2-3-working/12
