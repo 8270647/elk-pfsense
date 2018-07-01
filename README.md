@@ -17,6 +17,6 @@ A small collection of Logstash configurations to support pFsense 2.4.3 and dashb
 - Copy the contents of the /conf.d folder to your local logstash installation path (e.g. /etc/logstash/conf.d)
 - Cope the contents of the /patterns folder to your local logstash installation path (e.g. /etc/logstash/patterns)
 
-# Patters
+# Patterns
 
 While many versions of the Grok patters to support pfsense 2.4.+ exist, the following is confirmed working as of July 01, 2018. The supplied patters file (pfsense2-4.grok) assumes you are using vlans within your pfsense environment (it should work without vlans as well)
