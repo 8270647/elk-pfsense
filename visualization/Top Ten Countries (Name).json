@@ -1,0 +1,36 @@
+{
+  "title": "Top Ten Countries (Name)",
+  "type": "tagcloud",
+  "params": {
+    "scale": "linear",
+    "orientation": "single",
+    "minFontSize": 10,
+    "maxFontSize": 53,
+    "showLabel": false
+  },
+  "aggs": [
+    {
+      "id": "1",
+      "enabled": true,
+      "type": "count",
+      "schema": "metric",
+      "params": {}
+    },
+    {
+      "id": "2",
+      "enabled": true,
+      "type": "terms",
+      "schema": "segment",
+      "params": {
+        "field": "geoip.country_name.keyword",
+        "otherBucket": false,
+        "otherBucketLabel": "Other",
+        "missingBucket": false,
+        "missingBucketLabel": "Missing",
+        "size": 10,
+        "order": "desc",
+        "orderBy": "1"
+      }
+    }
+  ]
+}
