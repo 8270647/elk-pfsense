@@ -24,6 +24,12 @@ A small collection of Logstash configurations to support pFsense 2.4.3 and dashb
 
 While many versions of the Grok patters to support pfsense 2.4.+ exist, the following is confirmed working as of July 01, 2018. The supplied patters file (pfsense2-4.grok) assumes you are using vlans within your pfsense environment (it should work without vlans as well)
 
+Essentially, all that has been modified is to support the '.' within the vlan tagged interfaces within pfs 2.4.0+:
+
+IFACE \b[a-zA-Z0-9.]+\b
+PFSENSE_LOG_ENTRY %{PFSENSE_LOG_DATA}%{PFSENSE_IP_SPECIFIC_DATA}%{PFSENSE_IP_DATA}%{PFSENSE_PROTOCOL_DATA}?
+PFSENSE_LOG_DATA %{INT:rule},%{INT:sub_rule}?,,%{INT:tracker},%{IFACE:iface},%{WORD:reason},%{WORD:action},%{WORD:direction},
+
 # Credits / Reference
 
 The configurations are primarily a collection of information learned from the following sites:
